@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\My Workshop\\.SchuleAIT30\\SWE\\ali\\TodoApp\\TodoApp\\TodoApp.csproj": {}
+    "X:\\My Workshop\\.School\\swe\\ali\\TodoApp\\TodoApp\\TodoApp.csproj": {}
   },
   "projects": {
-    "D:\\My Workshop\\.SchuleAIT30\\SWE\\ali\\TodoApp\\TodoApp\\TodoApp.csproj": {
+    "X:\\My Workshop\\.School\\swe\\ali\\TodoApp\\TodoApp\\TodoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\My Workshop\\.SchuleAIT30\\SWE\\ali\\TodoApp\\TodoApp\\TodoApp.csproj",
+        "projectUniqueName": "X:\\My Workshop\\.School\\swe\\ali\\TodoApp\\TodoApp\\TodoApp.csproj",
         "projectName": "TodoApp",
-        "projectPath": "D:\\My Workshop\\.SchuleAIT30\\SWE\\ali\\TodoApp\\TodoApp\\TodoApp.csproj",
-        "packagesPath": "C:\\Users\\abidk\\.nuget\\packages\\",
-        "outputPath": "D:\\My Workshop\\.SchuleAIT30\\SWE\\ali\\TodoApp\\TodoApp\\obj\\",
+        "projectPath": "X:\\My Workshop\\.School\\swe\\ali\\TodoApp\\TodoApp\\TodoApp.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "X:\\My Workshop\\.School\\swe\\ali\\TodoApp\\TodoApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\abidk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,24 +39,6 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.32, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.1.32, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.32, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -68,15 +50,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WPF": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
