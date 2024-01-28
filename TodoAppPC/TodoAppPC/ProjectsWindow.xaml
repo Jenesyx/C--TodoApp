@@ -1,0 +1,27 @@
+﻿<Window x:Class="TodoAppPC.ProjectsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TodoAppPC"
+        mc:Ignorable="d"
+        Title="ProjectsWindow" Height="450" Width="800">
+    <StackPanel>
+        <Button x:Name="btnAddProject" Content="Add New Project" Click="BtnAddProject_Click"/>
+        <ItemsControl x:Name="ProjectsList">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="10" Padding="10" Background="WhiteSmoke" CornerRadius="10">
+                        <StackPanel Width="200">
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold" />
+                            <TextBlock Text="{Binding Beschreibung}" TextWrapping="Wrap" />
+                            <Button Content="Change" Margin="0,10,0,0" />
+                            <Button Content="Delete" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+    </StackPanel>
+</Window>
