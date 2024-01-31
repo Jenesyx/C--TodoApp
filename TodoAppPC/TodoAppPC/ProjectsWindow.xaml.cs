@@ -50,23 +50,85 @@ namespace TodoAppPC
 
         private void BtnAddProject_Click(object sender, RoutedEventArgs e)
         {
-            var dialog = new AddProjectDialog(); // Assuming you have a custom dialog for adding projects
+            var dialog = new AddProjectDialog();
             if (dialog.ShowDialog() == true)
             {
                 try
                 {
-                    var projectName = dialog.ProjectName; // Assume dialog returns project name
-                    var projectDescription = dialog.ProjectDescription; // Assume dialog returns project description
+                    var projectName = dialog.ProjectName;
+                    var projectDescription = dialog.ProjectDescription;
 
                     ioc.Pv.CreateProject(projectName, projectDescription, _currentUser.MitarbeiterId);
-                    LoadProjects(); // Refresh the list of projects
+                    LoadProjects(); 
                 }
                 catch (Exception ex)
                 {
-                    // Handle any exceptions that occur during project creation
-                    MessageBox.Show($"An error occurred while adding the project: {ex.Message}");
+                    var errorMessage = $"An error occurred (Add): {ex.Message}";
+                    if (ex.InnerException != null)
+                    {
+                        errorMessage += $" Inner exception: {ex.InnerException.Message}";
+                    }
+                    MessageBox.Show(errorMessage);
                 }
             }
         }
+
+        private void ChangeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            var project = button.DataContext as Projekte;
+
+            var dialog = new AddProjectDialog
+            {
+                ProjectName = project.Name,
+                ProjectDescription = project.Beschreibung
+            };
+
+            if (dialog.ShowDialog() == true)
+            {
+                try
+                {
+                    project.Name = dialog.ProjectName;
+                    project.Beschreibung = dialog.ProjectDescription;
+                    ioc.Pv.UpdateProject(project);
+                    LoadProjects();
+                }
+                catch (Exception ex)
+                {
+                    var errorMessage = $"An error occurred (Change): {ex.Message}";
+                    if (ex.InnerException != null)
+                    {
+                        errorMessage += $" Inner exception: {ex.InnerException.Message}";
+                    }
+                    MessageBox.Show(errorMessage);
+                }
+
+            }
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            var project = button.DataContext as Projekte;
+            if (MessageBox.Show("Are you sure you want to delete this project?", "Confirm Delete", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    ioc.Pv.DeleteProject(project.ProjektId);
+                    LoadProjects();
+                }
+                catch (Exception ex)
+                {
+                    var errorMessage = $"An error occurred (Delete): {ex.Message}";
+                    // Chatgpt Empfohlung für error handling
+                    if (ex.InnerException != null)
+                    {
+                        errorMessage += $" Inner exception: {ex.InnerException.Message}";
+                    }
+                    MessageBox.Show(errorMessage);
+                }
+            }
+        }
+
     }
 }

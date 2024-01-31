@@ -34,5 +34,33 @@ namespace TodoAppPC.Contorller
             ctx.SaveChanges();
         }
 
+        public void UpdateProject(Projekte project)
+        {
+            var existingProject = ctx.Projekte.Find(project.ProjektId);
+            if (existingProject != null)
+            {
+                existingProject.Name = project.Name;
+                existingProject.Beschreibung = project.Beschreibung;
+                ctx.SaveChanges();
+            }
+        }
+
+        public void DeleteProject(int projectId)
+        {
+            var todos = ctx.Todos.Where(t => t.ProjektId == projectId).ToList();
+            foreach (var todo in todos)
+            {
+                ctx.Todos.Remove(todo);
+            }
+
+            var project = ctx.Projekte.Find(projectId);
+            if (project != null)
+            {
+                ctx.Projekte.Remove(project);
+                ctx.SaveChanges();
+            }
+        }
+
+
     }
 }

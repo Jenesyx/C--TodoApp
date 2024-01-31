@@ -15,8 +15,9 @@
                         <StackPanel Width="200">
                             <TextBlock Text="{Binding Name}" FontWeight="Bold" />
                             <TextBlock Text="{Binding Beschreibung}" TextWrapping="Wrap" />
-                            <Button Content="Change" Margin="0,10,0,0" />
-                            <Button Content="Delete" />
+                            <Button Content="Change" Margin="0,10,0,0" Click="ChangeButton_Click" />
+                            <Button Content="Delete" Click="DeleteButton_Click" />
+
                         </StackPanel>
                     </Border>
                 </DataTemplate>

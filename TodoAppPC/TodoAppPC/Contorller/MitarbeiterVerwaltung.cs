@@ -32,5 +32,26 @@ namespace TodoAppPC.Contorller
             var user = ctx.Mitarbeiter.FirstOrDefault(m => m.Name == username);
             return user != null && user.Admin == 1;
         }
+
+        public void UpdateProject(Projekte project)
+        {
+            var existingProject = ctx.Projekte.Find(project.ProjektId);
+            if (existingProject != null)
+            {
+                existingProject.Name = project.Name;
+                existingProject.Beschreibung = project.Beschreibung;
+                ctx.SaveChanges();
+            }
+        }
+
+        public void DeleteProject(int projectId)
+        {
+            var project = ctx.Projekte.Find(projectId);
+            if (project != null)
+            {
+                ctx.Projekte.Remove(project);
+                ctx.SaveChanges();
+            }
+        }
     }
 }

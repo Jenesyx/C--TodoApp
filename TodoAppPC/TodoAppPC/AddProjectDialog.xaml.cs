@@ -19,8 +19,17 @@ namespace TodoAppPC
     /// </summary>
     public partial class AddProjectDialog : Window
     {
-        public string ProjectName { get; private set; }
-        public string ProjectDescription { get; private set; }
+        public string ProjectName
+        {
+            get { return projectNameTextBox.Text; }
+            set { projectNameTextBox.Text = value; }
+        }
+
+        public string ProjectDescription
+        {
+            get { return projectDescriptionTextBox.Text; }
+            set { projectDescriptionTextBox.Text = value; }
+        }
         public AddProjectDialog()
         {
             InitializeComponent();
@@ -28,10 +37,9 @@ namespace TodoAppPC
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            // Simple validation
             if (string.IsNullOrWhiteSpace(projectNameTextBox.Text) || string.IsNullOrWhiteSpace(projectDescriptionTextBox.Text))
             {
-                MessageBox.Show("Please enter both a name and a description for the project.");
+                MessageBox.Show("Please enter a name and a description for the project!");
                 return;
             }
 
