@@ -1,0 +1,9 @@
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Release\net6.0-windows\TodoAppPC.csproj.AssemblyReference.cache
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Release\net6.0-windows\AddProjectDialog.g.cs
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Release\net6.0-windows\LoginWindow.g.cs
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Release\net6.0-windows\MainWindow.g.cs
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Release\net6.0-windows\ProjectsWindow.g.cs
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Release\net6.0-windows\TodosWindow.g.cs
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Release\net6.0-windows\App.g.cs
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Release\net6.0-windows\TodoAppPC_MarkupCompile.cache
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Release\net6.0-windows\TodoAppPC_MarkupCompile.lref

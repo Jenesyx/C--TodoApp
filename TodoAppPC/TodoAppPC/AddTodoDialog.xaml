@@ -1,0 +1,19 @@
+﻿<Window x:Class="TodoAppPC.AddTodoDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TodoAppPC"
+        mc:Ignorable="d"
+        Title="AddTodoDialog" Height="450" Width="800">
+    <StackPanel Margin="10">
+        <TextBox x:Name="nameTextBox"/>
+        <TextBox x:Name="descriptionTextBox" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" Margin="0,10,0,0"/>
+        <ComboBox x:Name="statusComboBox" Margin="0,10,0,0">
+            <ComboBoxItem Content="Todo" Tag="0"/>
+            <ComboBoxItem Content="Doing" Tag="1"/>
+            <ComboBoxItem Content="Done" Tag="2"/>
+        </ComboBox>
+        <Button Content="Add Todo" Click="AddButton_Click" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" Margin="0,20,0,0"/>
+    </StackPanel>
+</Window>

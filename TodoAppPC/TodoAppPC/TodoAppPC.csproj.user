@@ -10,6 +10,9 @@
     <Compile Update="AddProjectDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="AddTodoDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="LoginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="AddProjectDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddTodoDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="LoginWindow.xaml">

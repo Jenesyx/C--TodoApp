@@ -63,3 +63,6 @@ X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Debug\net6.0-windows\AddP
 X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Debug\net6.0-windows\LoginWindow.baml
 X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Debug\net6.0-windows\ProjectsWindow.baml
 X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Debug\net6.0-windows\TodosWindow.baml
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Debug\net6.0-windows\AddTodoDialog.g.cs
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Debug\net6.0-windows\AddTodoDialog.baml
+X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs

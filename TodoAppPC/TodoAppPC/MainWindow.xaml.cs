@@ -31,7 +31,7 @@ namespace TodoAppPC
         {
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();
-            this.Close(); // Optionally close the MainWindow
+            this.Close();
         }
 
     }

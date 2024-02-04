@@ -9,20 +9,24 @@
     <StackPanel>
         <Button x:Name="btnAddProject" Content="Add New Project" Click="BtnAddProject_Click"/>
         <ItemsControl x:Name="ProjectsList">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Border Margin="10" Padding="10" Background="WhiteSmoke" CornerRadius="10">
-                        <StackPanel Width="200">
+                        <StackPanel Width="200" Height="200">
                             <TextBlock Text="{Binding Name}" FontWeight="Bold" />
                             <TextBlock Text="{Binding Beschreibung}" TextWrapping="Wrap" />
+                            <Button Content="Open Todos" Margin="0,10,0,0" Click="OpenTodos_Click" />
                             <Button Content="Change" Margin="0,10,0,0" Click="ChangeButton_Click" />
                             <Button Content="Delete" Click="DeleteButton_Click" />
-
                         </StackPanel>
                     </Border>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-
     </StackPanel>
 </Window>

@@ -44,7 +44,7 @@ namespace TodoAppPC
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while loading projects: {ex.Message}");
+                MessageBox.Show($"An error! while loading projects: {ex.Message}");
             }
         }
 
@@ -70,6 +70,10 @@ namespace TodoAppPC
                     }
                     MessageBox.Show(errorMessage);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Bad error by Adding Project!");
             }
         }
 
@@ -102,7 +106,10 @@ namespace TodoAppPC
                     }
                     MessageBox.Show(errorMessage);
                 }
-
+            }
+            else
+            {
+                MessageBox.Show("Bad error by Changing Project!");
             }
         }
 
@@ -120,7 +127,6 @@ namespace TodoAppPC
                 catch (Exception ex)
                 {
                     var errorMessage = $"An error occurred (Delete): {ex.Message}";
-                    // Chatgpt Empfohlung für error handling
                     if (ex.InnerException != null)
                     {
                         errorMessage += $" Inner exception: {ex.InnerException.Message}";
@@ -128,7 +134,23 @@ namespace TodoAppPC
                     MessageBox.Show(errorMessage);
                 }
             }
+            else
+            {
+                MessageBox.Show("Bad error by Deleting Project!");
+            }
         }
 
+        private void OpenTodos_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is FrameworkElement button && button.DataContext is Projekte selectedProject)
+            {
+                var todosWindow = new TodosWindow(_currentUser, _isAdmin, selectedProject);
+                todosWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Can not open Todos!");
+            }
+        }
     }
 }

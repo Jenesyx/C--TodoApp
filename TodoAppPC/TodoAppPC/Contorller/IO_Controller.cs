@@ -12,10 +12,12 @@ namespace TodoAppPC.Contorller
         private TodoAppContext ctx = new TodoAppContext();
         public MitarbeiterVerwaltung Mv;
         public ProjektVerwaltung Pv;
+        public TodoVerwaltung Tv;
         public IO_controller()
         {
             Mv = new MitarbeiterVerwaltung(ctx);
             Pv = new ProjektVerwaltung(ctx);
+            Tv = new TodoVerwaltung(ctx);
         }
     }
 }

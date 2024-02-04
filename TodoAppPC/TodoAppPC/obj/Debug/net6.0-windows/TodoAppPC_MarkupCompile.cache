@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 X:\My Workshop\.School\swe\ali\TodoAppPC\TodoAppPC\App.xaml
-5-1577933075
+6-670579823
 
-15-2044295383
+18-1155250293
 219836872190
-AddProjectDialog.xaml;LoginWindow.xaml;MainWindow.xaml;ProjectsWindow.xaml;TodosWindow.xaml;
+AddProjectDialog.xaml;AddTodoDialog.xaml;LoginWindow.xaml;MainWindow.xaml;ProjectsWindow.xaml;TodosWindow.xaml;
 
 False
 
